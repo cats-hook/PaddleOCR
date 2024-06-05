@@ -196,7 +196,7 @@ Train:
     shuffle: true
     drop_last: false
     batch_size_per_card: 32
-    num_workers: 2
+    num_workers: 4
 Eval:
   dataset:
     name: SimpleDataSet
