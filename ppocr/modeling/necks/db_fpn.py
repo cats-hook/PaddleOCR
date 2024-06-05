@@ -256,7 +256,7 @@ class RSEFPN(nn.Layer):
             self.incl2 = IntraCLBlock(self.out_channels // 4, reduce_factor=2)
             self.incl3 = IntraCLBlock(self.out_channels // 4, reduce_factor=2)
             self.incl4 = IntraCLBlock(self.out_channels // 4, reduce_factor=2)
-
+        in_channels = [in_channels]
         for i in range(len(in_channels)):
             self.ins_conv.append(
                 RSELayer(in_channels[i], out_channels, kernel_size=1, shortcut=shortcut)
