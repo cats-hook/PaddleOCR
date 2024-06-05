@@ -1,6 +1,6 @@
 Global:
   debug: true
-  use_gpu: false
+  use_gpu: true
   epoch_num: 500
   log_smooth_window: 20
   print_batch_step: 20
@@ -196,7 +196,7 @@ Train:
     shuffle: true
     drop_last: false
     batch_size_per_card: 2000
-    num_workers: 16
+    num_workers: 2
 Eval:
   dataset:
     name: SimpleDataSet
@@ -230,6 +230,6 @@ Eval:
   loader:
     shuffle: false
     drop_last: false
-    batch_size_per_card: 16
-    num_workers: 8
+    batch_size_per_card: 1
+    num_workers: 2
 profiler_options: null
